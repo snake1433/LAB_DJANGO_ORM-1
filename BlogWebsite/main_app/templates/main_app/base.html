@@ -17,16 +17,32 @@
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'main_app:add_post' %}">Add Post</a>
-                  </li>
-                </ul>
+                    <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'main_app:add_post' %}">Add Post</a>
+                    </li>
+
+                    <div  class="nav-item" >
+        
+                        <div class="form-outline">
+                            <form action="{% url 'main_app:search_page' %}" method="GET" role="search" >
+                          <input type="search" name="search" id="form1" class="form-control" placeholder="Search Post"/>
+                        </form>
+                        </div>
+        
+                      </div>
+                    </ul>
+
+
               </div>
+              
+              
             </div>
+
+
           </nav>
 
             <div class="container p-4">
